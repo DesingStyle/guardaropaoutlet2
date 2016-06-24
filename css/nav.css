@@ -1,0 +1,291 @@
+#navmenu
+{
+    display:block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align:center; /*Specify the alignment of the whole UL if UL is not width:100%;*/
+    letter-spacing:normal;    
+}
+#navmenu ul
+{ 
+    margin:0 auto;
+    padding:0;
+    text-align:center; /* Alignment of each top-level menu items within the UL */
+    width:100%;
+    font-size:0;
+    background:#333;
+    display:inline-block;
+    list-style:none;
+    position:relative;
+    z-index:999999990; 
+    /*box-shadow:0 0 8px rgba(0,0,0,.28),0 8px 16px rgba(0,0,0,.56);*/
+background:rgba(31,31,31,0.5);
+border-radius:0 0 4px 4px;
+}
+#navmenu li
+{
+    margin:0;
+    padding:0;
+    font-size:16px;
+    display:inline-block;
+    *display:inline;
+    zoom:1; /*for IE6-7*/
+    position:relative;
+    color:#eee;
+    line-height:66px; /*This determines the height of the menu*/
+    transition:background-color 0.2s;
+    outline:none;
+    box-shadow:0 0 8px rgba(0,0,0,.28),0 8px 16px rgba(0,0,0,.56);
+    -moz-user-select:none;
+    -webkit-user-select: none;
+    -ms-user-select: none;    
+}
+#navmenu .full-width {
+    position: static;    
+}
+#navmenu li:hover, #navmenu.over
+{
+    border-bottom:2px solid #0eb2f0;
+    border-top:2px solid #0eb2f0;
+    color:#0eb2f0;
+background:transparent;
+}
+#navmenu .over.no-sub {   
+    
+}
+#navmenu .top-heading
+{
+    font-weight:bold;
+    white-space:nowrap;
+    margin:0 16px;
+    color:inherit;
+    text-decoration:none;
+    display:inline-block; 
+    outline:0;
+    cursor:pointer;    
+}
+/* links of top-heading */
+#navmenu a, #navmenu a:link, #navmenu a:hover
+{
+    color:inherit;    
+}
+#navmenu a:hover
+{
+    text-decoration:none;    
+}
+#navmenu a:focus
+{
+    outline:1px dotted #09F;    
+}    
+/* caret(arrow icon) */
+#navmenu .caret
+{  
+    color:inherit;
+    left:-12px;
+    width: 0;
+    height: 0;
+    overflow:hidden;/*for IE6*/
+    vertical-align:middle;
+    margin-bottom:2px;
+    border-top: 4px solid;/*caret size is 4px now*/
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    display: inline-block;
+    position:relative;
+    z-index: 1010;    
+}          
+/* sub-menu layout
+----------------------------*/
+
+#navmenu .dropdown
+{
+    width:auto;    
+    left:0px;    
+    color:#000;   
+    padding:0;margin:0;display:none;position:absolute;
+    top:100%;
+    border:1px solid rgba(255,255,255,0.35);
+border-top:none;
+border-radius:2px;
+background-color:rgba(0,0,0,0.5);
+background-color:#ccc \9;/*fallback for old IE*/
+z-index: 1010;
+}
+#navmenu .full-width .dropdown {
+    width:100%;
+    padding:0;
+    margin:0;
+    margin-left:-1px; /*Set to 0 if UL has no border*/
+    z-index: 1010;    
+}
+#navmenu .offset300 {
+    left:-300px;right:auto;    
+}
+#navmenu .right-aligned {
+    left:auto;
+    right:0px;    
+}
+#navmenu .over .dropdown
+{
+    display:block;    
+}
+#navmenu .dd-inner {
+    text-align:center;
+    padding:20px;
+    margin:16px;
+    background-color:#FFF;
+    white-space:nowrap;
+    font-size:13px;
+    line-height:1.35;
+    z-index: 1010;    
+}  
+/* links in sub menu
+----------------------------*/
+
+#navmenu .dropdown a
+{ 
+    display:table-row;
+    *display:block;
+    color:#000;
+    line-height:22px;
+    text-decoration:none;
+    padding:0;    
+}
+#navmenu .dropdown a:hover, #navmenu .dropdown a:focus
+{
+    text-decoration:underline;
+    color:#09F;    
+}
+/* blocks within the sub-menu
+-----------------------------*/
+#navmenu .column
+{
+    text-align:left;
+    vertical-align:top;/*or middle*/
+    display:inline-block;
+    *display:inline;*zoom:1;
+    white-space:normal;
+    width:240px;
+padding:0 30px;
+border-right:1px solid #999;
+}
+#navmenu div.dd-inner div:last-child
+{
+    border-right:none;    
+}
+#navmenu .column h3 {
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-size: 24px;  
+}
+#navmenu div.column h3 {text-transform:uppercase;}
+#navmenu div.column260 {width:200px;}
+#navmenu div.column340 {width:340px;}
+
+/* useful when http://www.menucool.com/navmenu/one-menu-for-all-pages */
+#navmenuLink {display:none;}
+
+/*######## add additional styles for mobile-friendly responsive menu ########*/
+
+#navmenu .menu-icon   
+{
+    display:none; /* hide menu icon initially */
+}
+/*styles for mobile*/
+@media only screen and (max-width: 680px) 
+{
+    #navmenu .column.mayHide {
+        display:none;
+    }
+    /*override the original settings*/
+    #navmenu ul {
+        width: 100%; 
+        display: none;
+        border-radius:0;
+        background:#1f1f1f;/*rgba(0,153,255,0.6499999999999999); */
+    }    
+    #navmenu li {
+        position:relative;
+        display:block;
+        font-size:19px;
+        line-height:46px;
+        text-align:left;
+        border-bottom:1px solid #333;
+    }
+    #navmenu .full-width {
+        position: relative;
+    }    
+    #navmenu .dropdown {
+        position:relative;
+        *top:auto;/*for IE7*/
+        border:none;
+        border-radius:0;
+        box-shadow:none;
+        text-align:left;
+        background-color:#FFF;
+    }    
+    #navmenu .offset300 {
+        left:0;
+    }
+    #navmenu .full-width .dropdown {
+        width: auto;
+    }        
+    #navmenu .dd-inner
+    {
+        margin:0;
+        background:none;
+        text-align:left;
+    }    
+    /*turn each column to list vertically instead of horizontally */
+    #navmenu .column {
+        width:auto;
+        padding:0;
+        border:none;
+        display:block;
+    }
+    /*move the arrow icon to right*/
+    #navmenu .caret {
+        position:absolute;
+        left:auto;
+        right:14px;
+        top:20px;
+        border-width:5px;
+    }
+    /* All the following are for the .menu-icon (pure CSS) */
+    #navmenu .menu-icon {
+        font-size:32px;/*icon size*/
+        display: block;
+        position: relative;
+        width: 40px;
+        height:36px;
+        text-align:center;
+        cursor: pointer;
+        -moz-user-select:none;      
+        -webkit-user-select: none;
+        background-color: #eee;
+        border-radius: 3px;
+
+        margin-bottom:6px;
+        /*align the icon to the right*/
+        margin-left: auto;
+        margin-right: 11px;
+    }
+    #navmenu .menu-icon::before {
+        content: "";
+        position: absolute;
+        top: 0.25em;
+        left: 4px;
+        width: 1em;
+        height: 0.125em;
+        border-top: 0.375em double #333;
+        border-bottom: 0.125em solid #333;
+        box-sizing: content-box;
+    }
+    #navmenu .menu-icon-active {
+        background-color: #333;
+    }
+    #navmenu .menu-icon-active::before {
+        border-color: #eee;
+    }
+}
