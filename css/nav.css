@@ -1,291 +1,89 @@
-#navmenu
-{
-    display:block;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align:center; /*Specify the alignment of the whole UL if UL is not width:100%;*/
-    letter-spacing:normal;    
-}
-#navmenu ul
-{ 
-    margin:0 auto;
-    padding:0;
-    text-align:center; /* Alignment of each top-level menu items within the UL */
-    width:100%;
-    font-size:0;
-    background:#333;
-    display:inline-block;
-    list-style:none;
-    position:relative;
-    z-index:999999990; 
-    /*box-shadow:0 0 8px rgba(0,0,0,.28),0 8px 16px rgba(0,0,0,.56);*/
-background:rgba(31,31,31,0.5);
-border-radius:0 0 4px 4px;
-}
-#navmenu li
-{
-    margin:0;
-    padding:0;
-    font-size:16px;
-    display:inline-block;
-    *display:inline;
-    zoom:1; /*for IE6-7*/
-    position:relative;
-    color:#eee;
-    line-height:66px; /*This determines the height of the menu*/
-    transition:background-color 0.2s;
-    outline:none;
-    box-shadow:0 0 8px rgba(0,0,0,.28),0 8px 16px rgba(0,0,0,.56);
-    -moz-user-select:none;
-    -webkit-user-select: none;
-    -ms-user-select: none;    
-}
-#navmenu .full-width {
-    position: static;    
-}
-#navmenu li:hover, #navmenu.over
-{
-    border-bottom:2px solid #0eb2f0;
-    border-top:2px solid #0eb2f0;
-    color:#0eb2f0;
-background:transparent;
-}
-#navmenu .over.no-sub {   
-    
-}
-#navmenu .top-heading
-{
-    font-weight:bold;
-    white-space:nowrap;
-    margin:0 16px;
-    color:inherit;
-    text-decoration:none;
-    display:inline-block; 
-    outline:0;
-    cursor:pointer;    
-}
-/* links of top-heading */
-#navmenu a, #navmenu a:link, #navmenu a:hover
-{
-    color:inherit;    
-}
-#navmenu a:hover
-{
-    text-decoration:none;    
-}
-#navmenu a:focus
-{
-    outline:1px dotted #09F;    
-}    
-/* caret(arrow icon) */
+/*Logo*/
+.familynav-logo{background-image:url("../images/nav-spriteB.png");background-position:0 0;text-indent:100%;white-space:nowrap;overflow:hidden;-webkit-transform:translateY(45px);-ms-transform:translateY(45px);transform:translateY(45px);-webkit-transition:transform .2s ease;transition:transform .2s ease;float:left;height:102px;margin:0 20px 0 10px;width:98px}
+.familynav-logo:hover{background-image:url("../images/nav-sprite.png")}
+@media(-webkit-min-device-pixel-ratio:1.5),(min-resolution:1.5dppx),(min-resolution:144dpi){.familynav-logo{-webkit-background-size:98px 115px;background-size:98px 115px;background-image:url("../images/nav-sprite.png")}}
+@media(min-width:1400px){.familynav-logo{margin-left:20px;margin-right:96px}}
+@media(max-width:680px){.familynav-logo{-webkit-transform:scale(0.65) translateY(55px);-ms-transform:scale(0.65) translateY(55px);transform:scale(0.65) translateY(55px)}}
+/*Titulo*/
+#Titulo{position:absolute;left:30px;top:-2px}
+#Titulo h1 a{color:#f98383;text-decoration:none;text-shadow:2px 2px 4px #000000, 0 0 25px pink, 0 0 5px hotpink}
+#Titulo h1 a span{color:#fff;text-shadow:2px 2px 4px #000000, 0 0 25px pink, 0 0 5px #fff}
+#Contacto{position:absolute;right:120px;top:10px}
+#Redes{position:absolute;right:20px;top:10px}
+@media(max-width:680px){#Titulo h1 a{font-size:.97em}}
+@media(max-width:1080px){#Contacto {font-size:.85em;width:280px}}
+@media(max-width:680px){#Redes {display:none}#Contacto{right:20px;top:50px}}
+/*Encabezado*/
+.familynav-header{-webkit-background-size:100% 80px 100% 80px;background-size:100% 80px 100% 80px;zoom:1;-webkit-transition:background .2s ease;transition:background .2s ease;background:#1f1f1f;height:130px;position:relative;width:100%;z-index:10}
+.familynav-header:after{display:block;visibility:hidden;height:0;clear:both;content:"."}
+.familynav-header .container{margin:0 auto;padding:0;width:1000px}
+.familynav-header .adjunctnav{display:none}
+.familynav-header .adjunctnav.active{display:block}
+@media(min-width:1400px){.familynav-header .container{width:1400px}}
+@media(max-width:1000px){.familynav-header .container{width:760px}}
+@media(max-width:680px){.familynav-header{background:#1f1f1f;height:auto;position:relative}.familynav-header.overlay{position:relative}.familynav-header .container{background:#1f1f1f;width:100%}}
+/*Altura nav*/
+.familynav{display:block;float:left;height:70px;margin-top:55px;position:relative;width:610px}
+@media(max-width:680px){#navmenu{margin-top:50px}}
+/*Tamaño menu horizontal*/
+@media(min-width:1400px){.familynav{width:920px}}
+@media(max-width:1000px){.familynav{width:587px}}
+@media(max-width:680px){.familynav{float:none;height:auto;margin-top:30px;padding-top:30px;width:100%}}
+/*Logo*/
+@media(-webkit-min-device-pixel-ratio:1.5),(min-resolution:1.5dppx),(min-resolution:144dpi){.familynav-adjunctnav ul a[rel="external"]:after{-webkit-background-size:98px 115px;background-size:98px 115px;background-image:url("../images/nav-sprite.png196px")}}
+/*Escalar Logo*/
+.familynav-header.stuck{-webkit-transform:translateY(-50px);-ms-transform:translateY(-50px);transform:translateY(-50px);/*background:#332;*/background:rgba(51,51,51,0.7)box-shadow:0 1px 3px rgba(50,50,50,0.4);position:fixed;top:0;z-index:200}
+.familynav-header.stuck .familynav-logo{-webkit-transform:scale(0.65) translateY(55px);-ms-transform:scale(0.65) translateY(55px);transform:scale(0.65) translateY(55px)}
+
+/*NAVMENU*/
+#navmenu{display:block;letter-spacing:normal;text-align:center;/*Specify the alignment of the whole UL if UL is not width:100%;*/}
+#navmenu ul{background:#333;background:rgba(31,31,31,0.5);border-radius:0 0 6px 6px;display:inline-block;font-size:0;list-style:none;margin:0 auto;padding:0;position:relative;text-align:center;/* Alignment of each top-level menu items within the UL */width:100%;z-index:999999990}
+#navmenu li{background:transparent;border-top:1px solid #0eb2f0;border-radius:0 0 6px 6px;box-shadow:0 0 4px rgba(14, 178, 240,.28),0 4px 8px rgba(14, 178, 240,.56);color:#0eb2f0;display:inline-block;*display:inline;font-size:16px;line-height:66px;/*This determines the height of the menu*/margin-left:10px;outline:none;padding:0;position:relative;text-shadow:2px 2px 4px #000, 0 0 15px #0eb2f0;transition:background-color 0.2s;zoom:1;/*for IE6-7*/-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}
+#navmenu .full-width{position:static}
+#navmenu li:hover, #navmenu.over{background:#f98383;border-top:1px solid #eee;color:#eee;text-shadow:none}
+#navmenu .over.no-sub {}
+#navmenu .top-heading{color:inherit;cursor:pointer;display:inline-block;font-weight:bold;margin:0 16px;outline:0;text-decoration:none;white-space:nowrap}
+#navmenu a, #navmenu a:link, #navmenu a:hover{color:inherit}
+#navmenu a:hover{text-decoration:none}
+#navmenu a:focus{outline:1px dotted #09F}    
+/*(Flecha icono) */
 #navmenu .caret
-{  
-    color:inherit;
-    left:-12px;
-    width: 0;
-    height: 0;
-    overflow:hidden;/*for IE6*/
-    vertical-align:middle;
-    margin-bottom:2px;
-    border-top: 4px solid;/*caret size is 4px now*/
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
-    display: inline-block;
-    position:relative;
-    z-index: 1010;    
-}          
-/* sub-menu layout
-----------------------------*/
-
+{border-top:4px solid;/*caret size is 4px now*/border-right:4px solid transparent;border-left:4px solid transparent;color:inherit;display:inline-block;height:0;left:-12px;margin-bottom:2px;overflow:hidden;/*for IE6*/position:relative;vertical-align:middle;width:0;z-index:1010}
+/* Columnas sub-menu----------------------------*/
 #navmenu .dropdown
+{border:1px solid rgba(255,255,255,1.35);border-top:none;border-radius:2px;background-color:rgba(0,0,0,0.3);background-color:#ccc \9;/*fallback for old IE*/color:#000;display:none;left:0px;margin:0;padding:0;position:absolute;top:100%;width:auto;z-index:1010}
+#navmenu .full-width .dropdown {margin:0;margin-left:-1px;/*Set to 0 if UL has no border*/padding:0;width:100%;z-index:1010}
+#navmenu .offset300 {left:-300px;right:auto}
+#navmenu .right-aligned {left:auto;right:0px}
+#navmenu .over .dropdown{display:block}
+#navmenu .dd-inner {background-color:#FFF;font-size:13px;line-height:1.35;margin:16px;padding:20px;text-align:center;white-space:nowrap;z-index:1010}  
+/* links sub-menu----------------------------*/
+#navmenu .dropdown a{display:table-row;*display:block;color:#000;line-height:22px;padding:0;text-decoration:none;text-shadow:none}
+#navmenu .dropdown a:hover, #navmenu .dropdown a:focus{color:#09F;text-decoration:underline}
+#navmenu .column{text-align:left;vertical-align:top;/*or middle*/display:inline-block;*display:inline;*zoom:1;white-space:normal;width:240px;
+padding:0 30px;border-right:1px solid #999}
+#navmenu div.dd-inner div:last-child{border-right:none}
+#navmenu .column h3{font-weight:500;line-height:1.1;margin-top:12px;margin-bottom:8px;font-size:24px}
+#navmenu div.column h3{text-transform:uppercase}
+#navmenu div.column260{width:200px}
+#navmenu div.column340{width:340px}
+#navmenuLink {display:none}
+#navmenu .menu-icon{display:none}
+/*Para mobiles*/
+@media only screen and (max-width:680px) 
 {
-    width:auto;    
-    left:0px;    
-    color:#000;   
-    padding:0;margin:0;display:none;position:absolute;
-    top:100%;
-    border:1px solid rgba(255,255,255,0.35);
-border-top:none;
-border-radius:2px;
-background-color:rgba(0,0,0,0.5);
-background-color:#ccc \9;/*fallback for old IE*/
-z-index: 1010;
-}
-#navmenu .full-width .dropdown {
-    width:100%;
-    padding:0;
-    margin:0;
-    margin-left:-1px; /*Set to 0 if UL has no border*/
-    z-index: 1010;    
-}
-#navmenu .offset300 {
-    left:-300px;right:auto;    
-}
-#navmenu .right-aligned {
-    left:auto;
-    right:0px;    
-}
-#navmenu .over .dropdown
-{
-    display:block;    
-}
-#navmenu .dd-inner {
-    text-align:center;
-    padding:20px;
-    margin:16px;
-    background-color:#FFF;
-    white-space:nowrap;
-    font-size:13px;
-    line-height:1.35;
-    z-index: 1010;    
-}  
-/* links in sub menu
-----------------------------*/
-
-#navmenu .dropdown a
-{ 
-    display:table-row;
-    *display:block;
-    color:#000;
-    line-height:22px;
-    text-decoration:none;
-    padding:0;    
-}
-#navmenu .dropdown a:hover, #navmenu .dropdown a:focus
-{
-    text-decoration:underline;
-    color:#09F;    
-}
-/* blocks within the sub-menu
------------------------------*/
-#navmenu .column
-{
-    text-align:left;
-    vertical-align:top;/*or middle*/
-    display:inline-block;
-    *display:inline;*zoom:1;
-    white-space:normal;
-    width:240px;
-padding:0 30px;
-border-right:1px solid #999;
-}
-#navmenu div.dd-inner div:last-child
-{
-    border-right:none;    
-}
-#navmenu .column h3 {
-  font-weight: 500;
-  line-height: 1.1;
-  margin-top: 12px;
-  margin-bottom: 8px;
-  font-size: 24px;  
-}
-#navmenu div.column h3 {text-transform:uppercase;}
-#navmenu div.column260 {width:200px;}
-#navmenu div.column340 {width:340px;}
-
-/* useful when http://www.menucool.com/navmenu/one-menu-for-all-pages */
-#navmenuLink {display:none;}
-
-/*######## add additional styles for mobile-friendly responsive menu ########*/
-
-#navmenu .menu-icon   
-{
-    display:none; /* hide menu icon initially */
-}
-/*styles for mobile*/
-@media only screen and (max-width: 680px) 
-{
-    #navmenu .column.mayHide {
-        display:none;
-    }
-    /*override the original settings*/
-    #navmenu ul {
-        width: 100%; 
-        display: none;
-        border-radius:0;
-        background:#1f1f1f;/*rgba(0,153,255,0.6499999999999999); */
-    }    
-    #navmenu li {
-        position:relative;
-        display:block;
-        font-size:19px;
-        line-height:46px;
-        text-align:left;
-        border-bottom:1px solid #333;
-    }
-    #navmenu .full-width {
-        position: relative;
-    }    
-    #navmenu .dropdown {
-        position:relative;
-        *top:auto;/*for IE7*/
-        border:none;
-        border-radius:0;
-        box-shadow:none;
-        text-align:left;
-        background-color:#FFF;
-    }    
-    #navmenu .offset300 {
-        left:0;
-    }
-    #navmenu .full-width .dropdown {
-        width: auto;
-    }        
-    #navmenu .dd-inner
-    {
-        margin:0;
-        background:none;
-        text-align:left;
-    }    
-    /*turn each column to list vertically instead of horizontally */
-    #navmenu .column {
-        width:auto;
-        padding:0;
-        border:none;
-        display:block;
-    }
-    /*move the arrow icon to right*/
-    #navmenu .caret {
-        position:absolute;
-        left:auto;
-        right:14px;
-        top:20px;
-        border-width:5px;
-    }
-    /* All the following are for the .menu-icon (pure CSS) */
-    #navmenu .menu-icon {
-        font-size:32px;/*icon size*/
-        display: block;
-        position: relative;
-        width: 40px;
-        height:36px;
-        text-align:center;
-        cursor: pointer;
-        -moz-user-select:none;      
-        -webkit-user-select: none;
-        background-color: #eee;
-        border-radius: 3px;
-
-        margin-bottom:6px;
-        /*align the icon to the right*/
-        margin-left: auto;
-        margin-right: 11px;
-    }
-    #navmenu .menu-icon::before {
-        content: "";
-        position: absolute;
-        top: 0.25em;
-        left: 4px;
-        width: 1em;
-        height: 0.125em;
-        border-top: 0.375em double #333;
-        border-bottom: 0.125em solid #333;
-        box-sizing: content-box;
-    }
-    #navmenu .menu-icon-active {
-        background-color: #333;
-    }
-    #navmenu .menu-icon-active::before {
-        border-color: #eee;
-    }
+    #navmenu .column.mayHide{display:none}
+    #navmenu ul {width:100%;display:none;border-radius:0;background:#1f1f1f;/*rgba(0,153,255,0.6499999999999999);*/}    
+    #navmenu li {position:relative;display:block;font-size:19px;line-height:46px;text-align:left;border-bottom:1px solid #333}
+    #navmenu .full-width{position:relative}    
+    #navmenu .dropdown{position:relative;*top:auto;/*for IE7*/border:none;border-radius:0;box-shadow:none;text-align:left;background-color:#FFF}    
+    #navmenu .offset300{left:0}
+    #navmenu .full-width .dropdown{width:auto}        
+    #navmenu .dd-inner{margin:0;background:none;text-align:left}    
+    #navmenu .column {width:auto;padding:0;border:none;display:block}
+    #navmenu .caret {position:absolute;left:auto;right:14px;top:20px;border-width:5px}
+    #navmenu .menu-icon {font-size:32px;/*icon size*/display:block;position:relative;width:40px;height:36px;text-align:center;cursor:pointer;moz-user-select:none;-webkit-user-select:none;background-color:#eee;border-radius:3px;margin-bottom:6px;/*align the icon to the right*/margin-left:auto;margin-right:11px}
+    #navmenu .menu-icon::before {content:"";position:absolute;top:0.25em;left:4px;width:1em;height:0.125em;border-top:0.375em double #333;border-bottom:0.125em solid #333;box-sizing:content-box}
+    #navmenu .menu-icon-active {background-color:#333}
+    #navmenu .menu-icon-active::before {border-color:#eee}
 }

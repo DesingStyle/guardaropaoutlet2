@@ -12,7 +12,7 @@
         url("font/League_Gothic-webfont.be7dd1a6d846.woff") format('woff'),
         url("font/League_Gothic-webfont.d0bc8114ae36.ttf") 
     format('truetype');font-weight:normal;font-style:normal}
-@font-face {
+/*@font-face {
     font-family: 'kelvinchregular';
     src: url('font/kelvinch-roman.eot');
     src: url('font/kelvinch-roman.eot?#iefix') format('embedded-opentype'),
@@ -20,7 +20,7 @@
          url('font/Kelvinch-Roman.otf');
     font-weight: normal;
     font-style: normal;
-}
+}*/
 * {box-sizing: border-box;}
 body{background:#fff;color:#444;font-family:kelvinchregular, Arial, sans-serif;margin:0;padding:0;}
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,hr,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figure,figcaption,hgroup,menu,footer,header,main,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0}
@@ -28,19 +28,21 @@ address{font-style:normal;}
 a img{border:0}
  article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 header{background:#1f1f1f;border-top:3px solid #000;width:100%;z-index: 100;}
-header h1{color:#F98383;font-family:'Amaranth', sans-serif;font-weight:normal;font-size:2.5em;}
+header h1{color:#f98383;font-family:'Amaranth', sans-serif;font-weight:normal;font-size:2.5em;}
 header p{color:#fff;font-family:kelvinchregular, Arial, sans-serif;font-weight:normal;font-size:.95em;}
 header .center{margin:0 auto;max-width:980px;}
 header .logo {float:left;line-height:110px;padding:0 1em;}
 header .clear {clear:both;}
 h2{color:#000;font-family:'Amaranth', sans-serif;font-weight:normal;font-size:2em;text-align:center;}
-.clear {clear:both;}
-article{   
-    -moz-box-shadow:0 0 35px rgba(0,0,0,.4);
+.clearfix {
+  overflow: auto;
+  zoom: 1;}
+article{
+    background:linear-gradient(to top, rgba(255,0,0,0), rgba(230, 230, 230,1), rgba(217, 217, 217,1));
     -webkit-box-shadow:0 0 35px rgba(0,0,0,.4);
     box-shadow:0 0 35px rgba(0,0,0,.4);
     margin: 0 auto;
-    max-width: 1222px;
+    max-width: 1333px;
 }
  html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}               
 a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}
@@ -48,48 +50,37 @@ img{border:0}
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 body{font-size:14px;line-height:1.57142857;color:#333;}
-a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
+a{color:#337ab7;text-decoration:none}
+a:hover,a:focus{color:#23527c;text-decoration:underline}
+a:focus{outline:thin dotted;
+    outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
 img{vertical-align:middle}
+/*marcas*/
+.marcas{background:transparent;margin:0 auto;max-width:1105px;}
+.marcas p{border:1px solid #ddd;box-shadow:0 0 2px rgba(0,0,0,.16),0 2px 4px rgba(0,0,0,.32);float:left;min-width:80px;margin:5px;max-width:128px;padding:5px;width:12.5%;}
+.marcas img{width:100%}
+@media (max-width: 1105px){.marcas .col-m1{width:11.33%}}
+@media (max-width: 853px){.marcas .col-m1{width:10.33%}}
+@media (max-width: 320px){.marcas{margin-left:20px}}
 /*Productos en miniatura*/
-#rig {
-    max-width:900px;
-    margin:0 auto; /*center aligned*/
-    padding:0;
-    font-size:0; /* Remember to change it back to normal font size if have captions */
-    list-style:none;
-    background-color:none;  
-}
-#rig li {
-    display:inline-block;
-    *display:inline;/*for IE6 - IE7*/
-    width:25%;
-    vertical-align:middle;
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
+#rig {max-width:900px;margin:0 auto; /*center aligned*/padding:0;font-size:0; /* Remember to change it back to normal font size if have captions */list-style:none;background-color:transparent}
+#rig li {display:inline-block;*display:inline;/*for IE6 - IE7*/width:25%;vertical-align:middle;box-sizing:border-box;margin:0;padding:0}
 /* The wrapper for each item */
-.rig-cell {margin:12px;box-shadow:0 1px 4px rgba(0,0,0,0.4);padding:16px;border:none;color:#555;background-color:white;text-decoration:none;text-align:center;display:block;position: relative;overflow:hidden;}
-
+.rig-cell {margin:12px;box-shadow:0 1px 4px rgba(0,0,0,0.4);padding:16px;border:none;color:#555;background-color:white;text-decoration:none;text-align:center;display:block;position: relative;overflow:hidden}
 .rig-cell h3 {font-size:18px;font-family:'Oswald', sans-serif;font-weight:normal;}
-
 /* If have the image layer */
-.PantalonesH-img {
-    display:block;border:none;width:100%;height:0;padding-top:83.461538%;background-size:cover;background-color:white;background-image:url(../images/Pantalones_H.jpg);background-repeat:no-repeat;position:relative; /* Make its pseudo :after to be relative to it. */}
-.PolosH-img {
-    display:block;border:none;width:100%;height:0;padding-top:83.461538%;background-size:cover;background-color:white;background-image:url(../images/Polos_H.jpg);background-repeat:no-repeat;position:relative; /* Make its pseudo :after to be relative to it. */}
-.medias-img {
-    display:block;border:none;width:100%;height:0;padding-top:83.461538%;background-size:cover;background-color:white;background-image:url(../images/medias.jpg);background-repeat:no-repeat;position:relative; /* Make its pseudo :after to be relative to it. */}
-.rig-img {
-    display:block;border:none;width:100%;height:0;padding-top:83.461538%;background-size:cover;background-color:white;background-image:url(../images/bolsos.jpg);background-repeat:no-repeat;position:relative; /* Make its pseudo :after to be relative to it. */}
-.medias-img:after, .rig-img:after{position:absolute;top:20px;right:20px;bottom:20px;left:20px;border:1px solid #fff;content:'+';color:white;padding-top:14%;font-size:30px;opacity:0;filter:alpha(opacity=0);transition:all 0.3s;transform:scale(0);}
-
-#rig li:hover .rig-img:after, #rig li:hover .medias-img:after, #rig li:hover .PolosH-img:after{
-    opacity:1;
-    transform:scale(1);
-}
-
+.rig-img, .medias-img, .PolosH-img, .PantalonesH-img, .BilleterasH-img, .Camisas-H, .Buzos-H {display:block;border:none;width:100%;height:0;padding-top:83.461538%;background-size:cover;background-color:white;background-repeat:no-repeat;position:relative; /* Make its pseudo :after to be relative to it. */}
+.Camisas-H{background-image:url(../images/Camisas_H.jpg)}
+.BilleterasH-img{background-image:url(../images/Billeteras_H.jpg)}
+.PantalonesH-img{background-image:url(../images/Pantalones_H.jpg)}
+.PolosH-img{background-image:url(../images/Polos_H.jpg)}
+.medias-img{background-image:url(../images/medias.jpg)}
+.rig-img{background-image:url(../images/bolsos.jpg)}
+.Buzos-H{background-image:url(../images/Buzos_H.jpg)}
+/*Hover*/
+.medias-img:after, .rig-img:after, .PantalonesH-img:after, .PolosH-img:after, .BilleterasH-img:after, .Camisas-H:after, .Buzos-H:after{position:absolute;top:20px;right:20px;bottom:20px;left:20px;border:2px solid #000;content:'+';color:#000;padding-top:14%;font-size:30px;opacity:0;filter:alpha(opacity=0);/*For older IE*/transition:all 0.3s;transform:scale(0);}
+#rig li:hover .rig-img:after, #rig li:hover .medias-img:after, #rig li:hover .PolosH-img:after, #rig li:hover .PantalonesH-img:after, #rig li:hover .BilleterasH-img:after, #rig li:hover .Camisas-H:after, #rig li:hover .Buzos-H:after
+{opacity:1;transform:scale(1);}
 /* If have the overlay layer */
 .rig-overlay {
     position: absolute;
@@ -124,7 +115,7 @@ img{vertical-align:middle}
 /*Footer Menu*/ 
 .container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}     
 .col-sm-3 {position:relative;min-height:1px;padding-left:15px;padding-right:15px}
-.col-sm-3:hover{background:#ffccff}
+.col-sm-3:hover{background:#ccffff;cursor:pointer;}
 @media (min-width:768px){.col-sm-3 {float:left}.col-sm-3{width:25%}}
 .container-fluid:after{content:" ";display:table}
 .container-fluid:after{clear:both}        
