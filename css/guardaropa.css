@@ -44,7 +44,7 @@ article{
     margin: 0 auto;
     max-width: 1333px;
 }
- html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}               
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}               
 a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}
 img{border:0}
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
@@ -67,19 +67,27 @@ img{vertical-align:middle}
 #rig li {display:inline-block;*display:inline;/*for IE6 - IE7*/width:25%;vertical-align:middle;box-sizing:border-box;margin:0;padding:0}
 /* The wrapper for each item */
 .rig-cell {margin:12px;box-shadow:0 1px 4px rgba(0,0,0,0.4);padding:16px;border:none;color:#555;background-color:white;text-decoration:none;text-align:center;display:block;position: relative;overflow:hidden}
-.rig-cell h3 {font-size:18px;font-family:'Oswald', sans-serif;font-weight:normal;}
+.rig-cell h3 {font-size:18px;font-family:sans-serif;font-weight:normal;}
 /* If have the image layer */
-.rig-img, .medias-img, .PolosH-img, .PantalonesH-img, .BilleterasH-img, .Camisas-H, .Buzos-H {display:block;border:none;width:100%;height:0;padding-top:83.461538%;background-size:cover;background-color:white;background-repeat:no-repeat;position:relative; /* Make its pseudo :after to be relative to it. */}
+.Bolsos, .medias-img, .PolosH-img, .PantalonesH-img, .BilleterasH-img, .Camisas-H, .Buzos-H, .Buzos-M, .Belleza, .Billetera-M, .Chaqueta-M, .Medias-M, .Polos-M
+{display:block;border:none;width:100%;height:0;padding-top:83.461538%;background-size:cover;background-color:white;background-repeat:no-repeat;position:relative; /* Make its pseudo :after to be relative to it. */}
 .Camisas-H{background-image:url(../images/Camisas_H.jpg)}
 .BilleterasH-img{background-image:url(../images/Billeteras_H.jpg)}
 .PantalonesH-img{background-image:url(../images/Pantalones_H.jpg)}
 .PolosH-img{background-image:url(../images/Polos_H.jpg)}
 .medias-img{background-image:url(../images/medias.jpg)}
-.rig-img{background-image:url(../images/bolsos.jpg)}
+.Bolsos{background-image:url(../images/bolsos.jpg)}
 .Buzos-H{background-image:url(../images/Buzos_H.jpg)}
+.Buzos-M{background-image:url(../images/Buzos_M.jpg)}
+.Belleza{background-image:url(../images/Belleza.jpg)}
+.Billetera-M{background-image:url(../images/Billeteras_M.jpg)}
+.Chaqueta-M{background-image:url(../images/Chaquetas_M.jpg)}
+.Medias-M{background-image:url(../images/Medias_M.jpg)}
+.Polos-M{background-image:url(../images/Polos_M.jpg)}
 /*Hover*/
-.medias-img:after, .rig-img:after, .PantalonesH-img:after, .PolosH-img:after, .BilleterasH-img:after, .Camisas-H:after, .Buzos-H:after{position:absolute;top:20px;right:20px;bottom:20px;left:20px;border:2px solid #000;content:'+';color:#000;padding-top:14%;font-size:30px;opacity:0;filter:alpha(opacity=0);/*For older IE*/transition:all 0.3s;transform:scale(0);}
-#rig li:hover .rig-img:after, #rig li:hover .medias-img:after, #rig li:hover .PolosH-img:after, #rig li:hover .PantalonesH-img:after, #rig li:hover .BilleterasH-img:after, #rig li:hover .Camisas-H:after, #rig li:hover .Buzos-H:after
+.medias-img:after, .Bolsos:after, .PantalonesH-img:after, .PolosH-img:after, .BilleterasH-img:after, .Camisas-H:after, .Buzos-H:after,  .Buzos-M:after, .Belleza-M:after, .Billetera-M:after, .Chaqueta-M:after, .Medias-M:after
+{position:absolute;top:20px;right:20px;bottom:20px;left:20px;border:2px solid #000;content:'+';color:#000;padding-top:14%;font-size:30px;opacity:0;filter:alpha(opacity=0);/*For older IE*/transition:all 0.3s;transform:scale(0);}
+#rig li:hover .Bolsos:after, #rig li:hover .medias-img:after, #rig li:hover .PolosH-img:after, #rig li:hover .PantalonesH-img:after, #rig li:hover .BilleterasH-img:after, #rig li:hover .Camisas-H:after, #rig li:hover .Buzos-H:after, #rig li:hover .Buzos-M:after, #rig li:hover .Belleza:after, #rig li:hover .Billetera-M:after, #rig li:hover .Chaqueta-M:after, #rig li:hover .Medias-M:after
 {opacity:1;transform:scale(1);}
 /* If have the overlay layer */
 .rig-overlay {
@@ -96,19 +104,15 @@ img{vertical-align:middle}
 #rig li:hover .rig-overlay {
     opacity:0.5;
 }
-
 @media (max-width: 9000px) {
     #rig li {width:25%;}
 }
-
 @media (max-width: 800px) {
     #rig li {width:33.33%;}
 }
-
 @media (max-width: 500px) {
     #rig li {width:50%;}
 }
-
 @media (max-width: 350px) {
     #rig li {width:100%;}
 }
