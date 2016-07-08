@@ -119,7 +119,7 @@ img{vertical-align:middle}
 /*Footer Menu*/ 
 .container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}     
 .col-sm-3 {position:relative;min-height:1px;padding-left:15px;padding-right:15px}
-.col-sm-3:hover{background:#ccffff;cursor:pointer;}
+.col-sm-3:hover{background: radial-gradient(circle, #ccffff, #99ffff, #009999);/*background:#ccffff*/;cursor:pointer;}
 @media (min-width:768px){.col-sm-3 {float:left}.col-sm-3{width:25%}}
 .container-fluid:after{content:" ";display:table}
 .container-fluid:after{clear:both}        
