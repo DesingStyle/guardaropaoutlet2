@@ -27,7 +27,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
 address{font-style:normal;}
 a img{border:0}
  article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
-header{background:#1f1f1f;border-top:3px solid #000;width:100%;z-index: 100;}
+header{border-top:3px solid #000;width:100%;z-index: 100;}
 header h1{color:#f98383;font-family:'Amaranth', sans-serif;font-weight:normal;font-size:2.5em;}
 header p{color:#fff;font-family:kelvinchregular, Arial, sans-serif;font-weight:normal;font-size:.95em;}
 header .center{margin:0 auto;max-width:980px;}
@@ -56,7 +56,7 @@ a:focus{outline:thin dotted;
     outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
 img{vertical-align:middle}
 /*marcas*/
-.marcas{background:transparent;margin:0 auto;max-width:1105px;}
+.marcas{background:transparent;margin:0 auto;max-width:1105px;padding:15px 0}
 .marcas p{border:1px solid #ddd;box-shadow:0 0 2px rgba(0,0,0,.16),0 2px 4px rgba(0,0,0,.32);float:left;min-width:80px;margin:5px;max-width:128px;padding:5px;width:12.5%;}
 .marcas img{width:100%}
 @media (max-width: 1105px){.marcas .col-m1{width:11.33%}}
@@ -87,9 +87,9 @@ img{vertical-align:middle}
 .Perfumes-H{background-image:url(../images/Perfume.jpg)}
 .Perfumes-M{background-image:url(../images/Perfume_M.jpg)}
 /*Hover*/
-.medias-img:after, .Bolsos:after, .PantalonesH-img:after, .PolosH-img:after, .BilleterasH-img:after, .Camisas-H:after, .Buzos-H:after,  .Buzos-M:after, .Belleza-M:after, .Billetera-M:after, .Chaqueta-M:after, .Medias-M:after, .Perfumes-H:after, .Perfumes-M:after
+.medias-img:after, .Bolsos:after, .PantalonesH-img:after, .PolosH-img:after, .BilleterasH-img:after, .Camisas-H:after, .Buzos-H:after,  .Buzos-M:after, .Belleza:after, .Billetera-M:after, .Chaqueta-M:after, .Medias-M:after, .Perfumes-H:after, .Perfumes-M:after, .Polos-M:after
 {position:absolute;top:20px;right:20px;bottom:20px;left:20px;border:2px solid #000;content:'+';color:#000;padding-top:14%;font-size:30px;opacity:0;filter:alpha(opacity=0);/*For older IE*/transition:all 0.3s;transform:scale(0);}
-#rig li:hover .Bolsos:after, #rig li:hover .medias-img:after, #rig li:hover .PolosH-img:after, #rig li:hover .PantalonesH-img:after, #rig li:hover .BilleterasH-img:after, #rig li:hover .Camisas-H:after, #rig li:hover .Buzos-H:after, #rig li:hover .Buzos-M:after, #rig li:hover .Belleza:after, #rig li:hover .Billetera-M:after, #rig li:hover .Chaqueta-M:after, #rig li:hover .Medias-M:after, #rig li:hover .Perfumes-H:after, #rig li:hover .Perfumes-M:after
+#rig li:hover .Bolsos:after, #rig li:hover .medias-img:after, #rig li:hover .PolosH-img:after, #rig li:hover .PantalonesH-img:after, #rig li:hover .BilleterasH-img:after, #rig li:hover .Camisas-H:after, #rig li:hover .Buzos-H:after, #rig li:hover .Buzos-M:after, #rig li:hover .Belleza:after, #rig li:hover .Billetera-M:after, #rig li:hover .Chaqueta-M:after, #rig li:hover .Medias-M:after, #rig li:hover .Perfumes-H:after, #rig li:hover .Perfumes-M:after, #rig li:hover .Polos-M:after
 {opacity:1;transform:scale(1);}
 /* If have the overlay layer */
 .rig-overlay {
@@ -121,7 +121,7 @@ img{vertical-align:middle}
 /*Footer Menu*/ 
 .container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}     
 .col-sm-3 {position:relative;min-height:1px;padding-left:15px;padding-right:15px}
-.col-sm-3:hover{background: radial-gradient(circle, #ccffff, #99ffff, #009999);/*background:#ccffff*/;cursor:pointer;}
+.col-sm-3:hover{background: radial-gradient(circle, #fff, #eee, #ccc);/*background:#ccffff*/;cursor:pointer;}
 @media (min-width:768px){.col-sm-3 {float:left}.col-sm-3{width:25%}}
 .container-fluid:after{content:" ";display:table}
 .container-fluid:after{clear:both}        
